@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { Board } from "./tic-tac-TS/Board";
 import { ResetButton } from "./tic-tac-TS/ResetButton";
-import { Scoreboard } from "./tic-tac-TS/ScoreBord";
+import { ScoreBord } from "./tic-tac-TS/ScoreBord";
 import './App.css';
 
 const App = () => {
@@ -73,7 +73,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <Scoreboard scores={scores} xPlaying={xPlaying} />
+      <ScoreBord scores={scores} xPlaying={xPlaying} />
       <Board board={board} onClick={gameOver ? resetBoard : handleBoxClick} />
       <ResetButton resetBoard={resetBoard} />
     </div>

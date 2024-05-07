@@ -1,14 +1,18 @@
-import React from 'react'
+import React from 'react';
+import './Scoreboard.css';
 
-import "./ScoreBoard.css"
-
-export const ScoreBoard = ({ scores, xPlaying }) => {
-  const { xScore, oScore } = scores;
-
-  return (
-    <div className="scoreboard">
-      <span className={`score x-score ${!xPlaying && "inactive"}`}>X - {xScore}</span>
-      <span className={`score o-score ${xPlaying && "inactive"}`}>O - {oScore}</span>
-    </div>
-  )
+interface ScoreboardProps {
+  xScore: number;
+  oScore: number;
+  xPlaying: boolean;
 }
+
+const Scoreboard: React.FC<ScoreboardProps> = ({ xScore, oScore, xPlaying }) => (
+  <div className="Scoreboard">
+    <span className={`score xScore ${!xPlaying ? "inactive" : ""}`}>X - {xScore}</span>
+    <span className={`score oScore ${xPlaying ? "inactive" : ""}`}>O - {oScore}</span>
+  </div>
+);
+
+export default Scoreboard;
+

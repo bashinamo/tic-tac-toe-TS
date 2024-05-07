@@ -7,12 +7,12 @@ interface ScoreBordProps {
   xPlaying: boolean;
 }
 
-const Scoreboard: React.FC<ScoreBordProps> = ({ xScore, oScore, xPlaying }) => (
+const Scoreboard: React.FC<ScoreBordProps> = ({  }) => (
   <div className="Scoreboard">
-    <span className={`score xScore ${!xPlaying ? "inactive" : ""}`}>X - {xScore}</span>
+    <span className={`score xScore ${!onplaying ? "inactive" : ""}`}>X - {xScore}</span>
     <span className={`score oScore ${xPlaying ? "inactive" : ""}`}>O - {oScore}</span>
   </div>
 );
 
-export default Scoreboard;
+export default ScoreBord;
 
